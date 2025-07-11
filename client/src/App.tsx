@@ -1,7 +1,7 @@
 import { Link, Route } from "wouter";
 // import Home from "./pages/Home";
 import Login from "./pages/Login";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/feature/Navbar";
 
 function App() {
   return (
