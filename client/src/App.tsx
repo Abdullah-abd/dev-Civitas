@@ -5,7 +5,7 @@ import Navbar from "./components/feature/Navbar";
 
 function App() {
   return (
-    <div className="p-4">
+    <div className="p-0">
       <Navbar />
       <nav className="flex gap-4 mb-4">
         {/* <Link href="/">Home</Link> */}
