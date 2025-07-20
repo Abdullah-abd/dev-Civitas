@@ -17,6 +17,10 @@ const config: Config = {
         mutedGreen: "#CDE3D3",
         darkText: "#202020",
       },
+      screens: {
+        nav: "1030px", // your custom screen breakpoint for the nav items
+        logo: "240px", // your custom screen breakpoint for the logo 
+      },
       fontFamily: {
         sans: ['"Poppins"', "sans-serif"],
       },

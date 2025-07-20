@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import logo from "../../assets/logo.jpg";
+
 import {
   FaSearch,
   FaShoppingCart,
@@ -19,21 +21,23 @@ const Navbar: React.FC = () => {
       <div className="flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <div className="bg-yellow-400 text-black font-bold rounded-full px-2 py-1">
-            TS
-          </div>
-          <span className="text-lg font-semibold">Ta-Square</span>
+          <img
+            src={logo}
+            alt="Logo"
+            className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full object-cover"
+          />
+          <p className="font-bold logo:text-2xl font-extralight ">Dev Civitas</p>
         </div>
 
         {/* Hamburger Icon (Mobile Only) */}
-        <div className="md:hidden">
+        <div className="nav:hidden">
           <button onClick={toggleMenu}>
             {isMobileMenuOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
           </button>
         </div>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex items-center space-x-6">
+        <div className="hidden nav:flex items-center space-x-6">
           <a href="#" className="hover:text-yellow-400">
             Services
           </a>
@@ -66,7 +70,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu (conditionally shown) */}
       {isMobileMenuOpen && (
-        <div className="md:hidden mt-4 space-y-4">
+        <div className="nav:hidden mt-4 space-y-4">
           <a href="#" className="block hover:text-yellow-400">
             Services
           </a>
