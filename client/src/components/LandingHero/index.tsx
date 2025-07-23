@@ -23,6 +23,11 @@ const CivisSociusWelcome: React.FC = () => {
             Step into a city of code. Learn, share, contribute, and level up
             your skills with real-world projects and community-driven growth.
           </p>
+          <div className="mt-5">
+            <button className="bg-primary text-white px-4 py-1 rounded hover:bg-[#394E4A] transition">
+              Join
+            </button>
+          </div>
         </div>
 
         {/* Socius Section */}
@@ -32,6 +37,11 @@ const CivisSociusWelcome: React.FC = () => {
           <p className="text-[#394E4A] mt-2">
             Discover talented developers, post challenges, sponsor tasks, and
             collaborate directly with the builder community.
+            <div className="mt-5">
+              <button className="bg-secondary text-white px-4 py-1 rounded hover:bg-[#b84850] transition">
+                Join
+              </button>
+            </div>
           </p>
         </div>
       </div>
