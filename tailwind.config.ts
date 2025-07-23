@@ -11,11 +11,11 @@ const config: Config = {
     extend: {
       colors: {
         primary: "#3A8154",
-        secondary: "#CD535E",
+        secondary: "#E7556E",
         accent: "#F65353",
         background: "#FDF5F6",
-        mutedGreen: "#CDE3D3",
-        darkText: "#202020",
+        mutedGreen: "#394E4A",
+        darkText: "#6D3841",
       },
       screens: {
         nav: "1030px", // your custom screen breakpoint for the nav items

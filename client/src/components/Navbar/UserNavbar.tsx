@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import logo from "../../assets/logo.jpg";
 
 import {
+  FaBars,
   FaSearch,
   FaShoppingCart,
-  FaUser,
-  FaBars,
   FaTimes,
+  FaUser,
 } from "react-icons/fa";
 
 const Navbar: React.FC = () => {
@@ -17,58 +16,57 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-black text-white px-6 py-3 shadow-md">
+    <nav className="bg-[#394E4A] text-white px-6 py-3 shadow-md min-h-[64px]">
       <div className="flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <img
-            src={logo}
+            src="/logo.png"
             alt="Logo"
-            className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full object-cover"
+            className="w-[50px] h-[50px] object-contain"
           />
-          <p className="font-bold logo:text-2xl font-extralight ">Dev Civitas</p>
         </div>
 
         {/* Hamburger Icon (Mobile Only) */}
         <div className="nav:hidden">
           <button onClick={toggleMenu}>
-            {isMobileMenuOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
+            {isMobileMenuOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
           </button>
         </div>
 
         {/* Desktop Links */}
         <div className="hidden nav:flex items-center space-x-6">
-          <a href="#" className="hover:text-yellow-400">
-            Services
+          <a href="#" className="hover:text-accent transition">
+            Challenges
           </a>
-          <a href="#" className="hover:text-yellow-400">
-            About
+          <a href="#" className="hover:text-accent transition">
+            Learn
           </a>
-          <a href="#" className="hover:text-yellow-400">
-            Contact
+          <a href="#" className="hover:text-accent transition">
+            Jobs
           </a>
 
           <div className="relative w-64">
             <input
               type="text"
-              placeholder="Search services..."
+              placeholder="Search"
               className="w-full rounded-md pl-10 pr-3 py-2 bg-gray-800 text-white placeholder-gray-400 outline-none"
             />
             <FaSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
           </div>
 
-          <FaShoppingCart className="cursor-pointer" />
+          {/* <FaShoppingCart className="cursor-pointer" /> */}
           <div className="flex items-center space-x-2">
             <FaUser />
             <span className="text-sm font-semibold">Rahamat shaikh</span>
           </div>
-          <button className="bg-yellow-400 text-black px-4 py-1 rounded hover:bg-yellow-500">
+          <button className="bg-[#E7556E] text-white px-4 py-1 rounded hover:bg-[#d4435c] transition">
             Logout
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu (conditionally shown) */}
+      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="nav:hidden mt-4 space-y-4">
           <a href="#" className="block hover:text-yellow-400">
@@ -93,7 +91,7 @@ const Navbar: React.FC = () => {
             <span>Rahamat shaikh</span>
           </div>
           <FaShoppingCart className="text-white" />
-          <button className="bg-yellow-400 text-black px-4 py-1 rounded hover:bg-yellow-500 w-full">
+          <button className="bg-[#E7556E] text-white px-4 py-1 rounded hover:bg-[#d4435c] w-full">
             Logout
           </button>
         </div>
