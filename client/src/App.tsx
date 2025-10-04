@@ -10,7 +10,7 @@ function App() {
       <Navbar />
       {/* <Route path="/" component={Home} /> */}
       <Route path="/login" component={() => <Login />} />
-      <Route path="/landingpage" component={() => <LandingPage />} />
+      <Route path="/" component={() => <LandingPage />} />
     </div>
   );
 }
