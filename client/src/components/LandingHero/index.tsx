@@ -1,7 +1,9 @@
 import { Briefcase, User } from "lucide-react";
 import React from "react";
+import { useLocation } from "wouter";
 
 const CivisSociusWelcome: React.FC = () => {
+  const [, setLocation] = useLocation();
   return (
     <div className="w-full px-6 py-12 bg-[#FDF5F6] rounded-2xl shadow-md flex flex-col gap-8 items-center">
       <h1 className="text-4xl font-bold text-center text-[#6D3841]">
@@ -24,7 +26,12 @@ const CivisSociusWelcome: React.FC = () => {
             your skills with real-world projects and community-driven growth.
           </p>
           <div className="mt-5">
-            <button className="bg-primary text-white px-4 py-1 rounded hover:bg-[#394E4A] transition">
+            <button
+              className="bg-primary text-white px-4 py-1 rounded hover:bg-[#394E4A] transition"
+              onClick={() => {
+                setLocation("/signup");
+              }}
+            >
               Join
             </button>
           </div>

@@ -1,6 +1,8 @@
 import React from "react";
+import { useLocation } from "wouter";
 
 const GetStarted: React.FC = () => {
+  const [, setLocation] = useLocation();
   return (
     <section className="w-full">
       {/* Sky-colored background for text section */}
@@ -15,7 +17,10 @@ const GetStarted: React.FC = () => {
             <span className="font-semibold text-secondary">Socius</span> find
             your talent.
           </p>
-          <button className="bg-primary text-white font-semibold px-6 py-3 rounded-full hover:bg-primary/90 transition">
+          <button
+            className="bg-primary text-white font-semibold px-6 py-3 rounded-full hover:bg-primary/90 transition"
+            onClick={() => setLocation("/signup")}
+          >
             Get started
           </button>
         </div>
